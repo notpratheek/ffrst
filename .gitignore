@@ -1,0 +1,13 @@
+# These are all the files (folders actually) that need to be ignored,
+# since they are generated from virtualenv
+
+
+bin/
+include/
+lib/
+journal/*.ropeproject
+
+# user junk !
+
+*.swp
+*.swo
