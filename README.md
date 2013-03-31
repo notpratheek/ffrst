@@ -9,7 +9,7 @@ Not a lot of creative folder names during that time !
 ---
 
 Here's how to get started :
-(actuall I'll write it as code, much better to understand !)
+(actually I'll write it as code. As its much easier to understand !)
 
 ```sh
 ~ $ git clone https://github.com/Pychimp/ffrst.git
@@ -28,8 +28,8 @@ Installing pip...............done.
 
 
 ~/ffrst $ ls -Fa
-./   bin/    .git/       include/  lib/
-../  build/  .gitignore  journal/  requirements.txt
+./   bin/   .gitignore  journal/  README.md
+../  .git/  include/    lib/      requirements.txt
 
 
 ~/ffrst $ source bin/activate
@@ -39,6 +39,7 @@ Installing pip...............done.
 (ffrst) ~/ffrst $ pip install -r requirements.txt
 Downloading/unpacking <...downloads and install all packages from requirements.txt>
 # Might wanna go and grab a cup of coffee ! :)
+# docutils kinda freezes the process ! :|
 
 
 (ffrst) ~/ffrst $ cd journal/
@@ -54,5 +55,8 @@ Downloading/unpacking <...downloads and install all packages from requirements.t
 * Running on http://127.0.0.1:8000/
 * Restarting with reloader
 
-
 ```
+
+open your browser and point it to http://127.0.0.1:8000/ (You should be greeted by Hello World !)
+and just for kicks, try pointing to http://127.0.0.1:8000/hello-world/ (Should show some text ! 
+Which is the HTML-ified version of [hello-world.rst](https://raw.github.com/Pychimp/ffrst/master/journal/pages/hello-world.rst))
