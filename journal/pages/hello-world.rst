@@ -1,7 +1,7 @@
-:title: Hello World
-:date: 2013-03-21
+title: Hello World
+date = 2013-03-21
+tags: [general, awesome, hello]
 
-===========
 Hello World
 ===========
 

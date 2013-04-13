@@ -12,3 +12,4 @@ journal/*.ropeproject
 *.swp
 *.swo
 journal/*.pyc
+build/

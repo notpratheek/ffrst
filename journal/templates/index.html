@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>List of Stuff</h2>
+    <ul>
+    {% for page in pages %}
+        <li>
+            <a href="{{url_for("page", path=page.path) }}">{{ page.path }}</a>
+        </li>
+        {% else %}
+            <li>No Stuff !</li>
+        {% endfor %}
+    </ul>
+{% endblock content %}
