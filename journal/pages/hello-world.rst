@@ -1,5 +1,5 @@
 title: Hello World
-date = 2013-03-21
+date: 2013-03-21
 tags: [general, awesome, hello]
 
 Hello World

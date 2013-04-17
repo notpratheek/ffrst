@@ -20,7 +20,7 @@ def tag(tag):
 
 @app.route('/<path:path>/')
 def page(path):
-    page = pages.get_or_404(path).html
+    page = pages.get_or_404(path)
     return render_template('page.html', page=page)
 
 

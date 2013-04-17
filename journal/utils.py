@@ -11,6 +11,7 @@ def restructuredtext_filter(text, result=None):
     result = result or 'fragment'
     writer_name = app.config.get('RESTRUCTUREDTEXT_WRITER_NAME', 'html4css1')
 
-    parts = publish_parts(source=text, writer_name=writer_name,
-                            settings_overrides=docutils_settings)
+    parts = publish_parts(source=text,
+                          writer_name=writer_name,
+                          settings_overrides=docutils_settings)
     return do_mark_safe(parts[result])
