@@ -8,3 +8,7 @@ Hello World
 Here's a link to python.org_
 
 .. _python.org: http://python.org
+
+Here's a code block ::
+
+>>> print "hello world !"

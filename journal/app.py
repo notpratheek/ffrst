@@ -1,10 +1,15 @@
 from flask import Flask, render_template
-from flask_flatpages import FlatPages
+from flask_flatpages import FlatPages, pygments_style_defs
 import settings
 
 app = Flask(__name__)
 app.config.from_object(settings)
 pages = FlatPages(app)
+
+
+@app.route('/pygments.css')
+def pygments_css():
+    return pygments_style_defs('tango'), 200, {'Content-Type': 'text/css'}
 
 
 @app.route('/')

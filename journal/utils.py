@@ -9,9 +9,7 @@ def restructuredtext_filter(text, result=None):
     app = current_app
     docutils_settings = app.config.get('RESTRUCTUREDTEXT_FILTER_SETTINGS', {})
     result = result or 'fragment'
-    writer_name = app.config.get('RESTRUCTUREDTEXT_WRITER_NAME', 'html4css1')
-
-    parts = publish_parts(source=text,
-                          writer_name=writer_name,
-                          settings_overrides=docutils_settings)
+    writer = app.config.get('RESTRUCTUREDTEXT_WRITER_NAME', 'html4css1')
+    parts = publish_parts(source=text, writer_name=writer,
+            settings_overrides=docutils_settings)
     return do_mark_safe(parts[result])

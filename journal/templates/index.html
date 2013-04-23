@@ -5,7 +5,7 @@
     <ul>
     {% for page in pages %}
         <li>
-            <a href="{{url_for("page", path=page.path) }}">{{ page.path }}</a>
+            <a href="{{url_for("page", path=page.path) }}">{{ page.path }}</a> | Dated: {{ page.meta.date }}
         </li>
         {% else %}
             <li>No Stuff !</li>
