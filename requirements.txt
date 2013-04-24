@@ -1,5 +1,5 @@
 Flask==0.9
-Flask-FlatPages==0.3
+Flask-FlatPages
 Frozen-Flask==0.10
 Jinja2==2.6
 Markdown==2.3.1
