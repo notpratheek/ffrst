@@ -1,5 +1,8 @@
 from flask import Flask, render_template
-from flask_flatpages import FlatPages, pygments_style_defs
+from flask_flatpages import FlatPages
+from pygments.formatters import HtmlFormatter
+
+import sourcecode
 import settings
 
 app = Flask(__name__)
@@ -9,7 +12,9 @@ pages = FlatPages(app)
 
 @app.route('/pygments.css')
 def pygments_css():
-    return pygments_style_defs('tango'), 200, {'Content-Type': 'text/css'}
+    formatter = HtmlFormatter(style='tango')
+    styles = formatter.get_style_defs('.highlight')
+    return styles, 200, {'Content-Type': 'text/css'}
 
 
 @app.route('/')
